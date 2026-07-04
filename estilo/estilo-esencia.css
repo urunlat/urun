@@ -1,0 +1,1342 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+:root {
+  --color-fondo: #0e1117; 
+  --color-fondo-claro: #f8fafc;
+   --color-botones: #0bbf9a;
+   --hover:#0fe3a7;
+   --gris-claro:#f0f0f0;
+--colordemenu:#919191;
+  --color-parrafos:#6B7280;
+  --coloretiqueta:#e9edf0;
+  ---colorhoveroscuro:#e5e7eb;
+}
+
+
+
+
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--color-fondo-claro);
+
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+
+  overflow:hidden;
+}
+
+
+/* ===============================
+   NAVBAR — TRANSLÚCIDO PREMIUM
+================================ */
+
+.navbar {
+  width: 100%;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  flex-shrink:0;
+
+  /* #1f1f1f convertido a traslúcido */
+  background: var(--color-fondo);
+  
+}
+
+/* Estado oculto */
+.navbar.nav-hidden {
+  opacity: 0;
+}
+
+/* ===============================
+   CONTENEDOR ANCHO
+================================ */
+.nav-container {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+/* ===============================
+   LOGO
+================================ */
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 18px;
+  display: block;
+}
+
+/* TEXTO META */
+.logo-meta {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  margin-top: 5px;
+  font-size: 11px;
+  color: var(--color-parrafos); /* gris UI */
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .logo-meta {
+    display: none;
+  }
+}
+
+/* ===============================
+   LINKS
+================================ */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--colordemenu); /* gris lectura */
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.25s ease;
+ 
+}
+
+/* Hover y activo */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-fondo-claro);
+}
+
+/* Línea activa product UI */
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-botones);
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   BOTÓN NAV
+================================ */
+
+/* ===============================
+   BOTÓN NAV (LIMPIO)
+================================ */
+.btn-nav {
+  height: 40px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+
+  border-radius: 999px;
+
+  /* verde sólido (sin degradado llamativo) */
+  background: var(--color-botones);
+  color: var(--color-fondo);
+
+  text-decoration: none;
+}
+
+/* hover muy sutil (sin movimiento) */
+.btn-nav:hover {
+  background: var(--hover);
+}
+
+.manifesto-page{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:0;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    width:100%;
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 0;
+
+    min-height:0;
+
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ALINEADO CON GUÍAS
+========================= */
+
+
+.manifesto-content{
+
+    width:1196px;
+    max-width:calc(100% - 40px);
+
+    margin:0 auto;
+
+}
+
+
+
+/* =========================
+   GRID PRINCIPAL
+========================= */
+
+
+.manifesto-layout{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+/* =========================
+   COLUMNA TITULO
+========================= */
+
+
+.manifesto-title{
+
+    max-width:420px;
+
+}
+
+
+
+.manifesto-badge{
+
+
+    display:inline-flex;
+
+    padding:6px 13px;
+
+    border-radius:999px;
+
+    background:#f3f4f5;
+
+    color:#666;
+
+    font-size:11px;
+
+    letter-spacing:1.5px;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+
+}
+
+
+
+.manifesto-title h1{
+
+
+    margin:0;
+
+
+    font-size:clamp(2.2rem,3vw,3.4rem);
+
+
+    line-height:1.05;
+
+
+    letter-spacing:-2px;
+
+
+    font-weight:600;
+
+
+    color:#080808;
+
+
+}
+
+
+
+
+.manifesto-intro{
+
+
+    margin-top:22px;
+
+
+    max-width:380px;
+
+
+    font-size:15px;
+
+
+    line-height:1.55;
+
+
+    color:#666;
+
+
+}
+
+
+
+
+/* =========================
+   TEXTO MANIFIESTO
+========================= */
+
+
+.manifesto-text{
+
+    width:100%;
+
+}
+
+
+
+.manifesto-text p{
+
+
+    margin:0 0 18px;
+
+
+    font-size:13.5px;
+
+
+    line-height:1.5;
+
+
+    text-align:justify;
+
+
+    text-justify:inter-word;
+
+
+    color:#5f6368;
+
+
+    letter-spacing:.01em;
+
+
+}
+
+
+
+.manifesto-text p:first-child{
+
+
+    color:#2b2b2b;
+
+
+}
+
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+
+.manifesto-divider{
+
+
+    width:100%;
+
+
+    height:1px;
+
+
+    margin:28px 0 22px;
+
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(0,0,0,.08),
+        transparent
+    );
+
+
+}
+
+
+
+
+/* =========================
+   FIRMA
+========================= */
+
+
+.manifesto-sign{
+
+
+    margin-top:0;
+
+    padding-top:4px;
+
+    letter-spacing:-0.02em;
+
+
+}
+
+
+
+.manifesto-sign strong{
+
+
+    font-size:21px;
+
+    font-weight:700;
+
+
+}
+
+
+
+
+/* =========================
+   OCULTOS
+========================= */
+
+
+.manifesto-grid,
+.ui-card{
+
+    display:none;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:900px){
+
+
+.hero{
+
+    padding:30px 25px;
+
+}
+
+
+
+.manifesto-content{
+
+    max-width:100%;
+
+}
+
+
+
+.manifesto-layout{
+
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+
+}
+
+
+
+.manifesto-title h1{
+
+
+    font-size:2.2rem;
+
+
+}
+
+
+
+.manifesto-text p{
+
+
+    font-size:14px;
+
+    line-height:1.55;
+
+    text-align:left;
+
+
+}
+
+
+}
+
+
+/* SECCION FINAL */
+
+.urun-final {
+  background: var(--color-fondo);
+  padding: 80px 20px 50px; /* 🔥 más compacta */
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.urun-final-inner{
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+
+}
+
+/* =========================
+   TEXTO CTA FINAL
+========================= */
+
+.urun-final-text{
+  
+  padding: 20px 20px 50px;
+  text-align: center;
+}
+
+/* BADGE */
+
+.urun-final-text .plan-badge{
+  margin-bottom: 16px;
+}
+
+/* TITULO */
+
+.urun-final-text .titulo-plan{
+  margin: 0 auto;
+  max-width: px;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+
+  color: #f1f2f6;
+}
+
+/* LÍNEAS */
+
+.urun-final-text .linea-1,
+.urun-final-text .linea-2{
+  display: block;
+}
+
+/* ACENTO */
+
+.urun-final-text .gris{
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* PÁRRAFO */
+
+.urun-final-text .final-text {
+  margin: 18px auto 0;
+  max-width: 520px;
+
+  font-size: 16.5px;
+  line-height: 1.6;
+
+  color: rgba(241,242,246,.68);
+  letter-spacing: -0.005em;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.urun-final-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  margin-top: 32px;
+  margin-bottom: 1rem;
+}
+
+.urun-final-buttons a{
+  min-width: 170px;
+}
+
+/* =========================
+   VISUAL
+========================= */
+
+.urun-final-visual{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  margin-top: -35px;
+}
+
+/* WRAP */
+.icon-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* ICONO BASE */
+.icon-wrap img {
+  width: 350px;
+  display: block;
+
+  /* 🔥 NEON CONTORNO */
+  filter:
+    drop-shadow(0 0 2px #0fe3a7)
+    drop-shadow(0 0 6px #0fe3a7)
+    drop-shadow(0 0 12px #0fe3a7)
+    drop-shadow(0 0 25px rgbaF(15,227,167,0.8))
+    drop-shadow(0 0 45px rgba(15,227,167,0.6));
+
+    
+
+  animation: neonPulse 2.5s ease-in-out infinite;
+}
+
+/* 🔥 ANIMACIÓN SUAVE (como luz viva) */
+@keyframes neonPulse {
+  0% {
+    filter:
+      drop-shadow(0 0 2px #0fe3a7)
+      drop-shadow(0 0 6px #0fe3a7)
+      drop-shadow(0 0 12px #0fe3a7)
+      drop-shadow(0 0 25px rgba(15,227,167,0.6))
+      drop-shadow(0 0 40px rgba(15,227,167,0.4));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 4px #0fe3a7)
+      drop-shadow(0 0 10px #0fe3a7)
+      drop-shadow(0 0 20px #0fe3a7)
+      drop-shadow(0 0 40px rgba(15,227,167,0.9))
+      drop-shadow(0 0 70px rgba(15,227,167,0.7));
+  }
+
+  100% {
+    filter:
+      drop-shadow(0 0 2px #0fe3a7)
+      drop-shadow(0 0 6px #0fe3a7)
+      drop-shadow(0 0 12px #0fe3a7)
+      drop-shadow(0 0 25px rgba(15,227,167,0.6))
+      drop-shadow(0 0 40px rgba(15,227,167,0.4));
+  }
+}
+
+
+/* 🔥 DEGRADADO ENCIMA DEL ICONO (SIN CUADRO) */
+.icon-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* 🔑 CLAVE: usar la imagen como máscara */
+  -webkit-mask: url("./assets/icono de logo.png") center / contain no-repeat;
+  mask: url("./assets/icono de logo.png") center / contain no-repeat;
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255,255,255,0.25),
+    rgba(15,227,167,0.25) 40%,
+    transparent 70%
+  );
+
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ✨ REFLEJO SUPERIOR TIPO VIDRIO */
+.icon-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* máscara del icono */
+  -webkit-mask: url("./assets/icono de logo.png") center / contain no-repeat;
+  mask: url("./assets/icono de logo.png") center / contain no-repeat;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.45) 0%,
+    rgba(255,255,255,0.15) 20%,
+    transparent 40%
+  );
+
+  opacity: 0.7;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .urun-final-text h2 {
+    font-size: 2.1rem;
+  }
+
+  .urun-final-visual img {
+    width: 150px;
+  }
+}
+
+
+
+.urun-footer{
+    position:relative;
+    background:var(--color-fondo);
+    color:#eaeaea;
+    padding:8px 20px;
+    overflow:hidden;
+    font-family:Inter,system-ui,sans-serif;
+      flex-shrink:0;
+}
+
+/* ==================================
+   TOP
+================================== */
+
+.urunf-top{
+
+    max-width:1320px;
+    margin:0 auto;
+
+    padding:0 4rem 7rem;
+
+    display:grid;
+    grid-template-columns:1.3fr 1.7fr;
+    gap:5rem;
+
+}
+
+/* ==================================
+   MARCA
+================================== */
+
+.urunf-title{
+
+    display:flex;
+    flex-direction:column;
+
+    font-size:30px;
+    line-height:1.15;
+
+    max-width:420px;
+
+}
+
+.urunf-linea-1{
+
+    display:block;
+
+}
+
+.urunf-separador{
+
+    display:block;
+    height:28px;
+
+}
+
+.urunf-brand-name{
+
+    display:block;
+    color:#ffffff;
+    font-weight:800;
+
+}
+
+.urunf-linea-2{
+
+    display:block;
+
+}
+
+/* ==================================
+   COLUMNAS
+================================== */
+
+.urunf-columns{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,max-content);
+
+    justify-content:space-between;
+
+    width:100%;
+
+    gap:2rem;
+
+}
+
+.urunf-col h5{
+
+    font-size:.7rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:#7a7a7a;
+
+    margin-bottom: .9rem;
+
+}
+
+.urunf-col ul{
+
+    margin:0;
+    padding:0;
+    list-style:none;
+
+}
+
+.urunf-col li{
+
+    margin-bottom:2px;
+
+    line-height:1.35;
+
+    font-size:.9rem;
+
+    color:#cfcfcf;
+
+}
+
+.urunf-col a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    opacity:.72;
+
+    transition:.25s;
+
+}
+
+.urunf-col a:hover{
+
+    opacity:1;
+
+}
+
+.urunf-note{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    opacity:.55;
+
+    max-width:220px;
+
+}
+
+/* ==================================
+   DIVIDER
+================================== */
+
+.urunf-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:rgba(255,255,255,.12);
+
+}
+
+/* ==================================
+   BOTTOM
+================================== */
+
+.urunf-bottom{
+    font-size:12px;
+
+    max-width:1270px;
+    margin:0 auto;
+
+    padding:40px 40px;
+
+    display:grid;
+    grid-template-columns:1fr 1.5fr 1.5fr 1fr;
+
+    align-items:center;
+
+    color:#9a9a9a; 
+}
+
+.urunf-item{
+
+    line-height:1.5;
+
+}
+
+.urunf-right{
+
+    text-align:right;
+
+}
+
+.urunf-formula{
+
+    text-align:center;
+
+}
+
+.urunf-formula strong{
+
+    display:block;
+
+    font-weight:500;
+
+}
+
+.urunf-formula small{
+
+    display:block;
+
+    margin-top:4px;
+
+    opacity:.6;
+
+}
+
+/* ==================================
+   HEART
+================================== */
+
+.urunf-heart{
+
+    width:20px;
+
+    height:20px;
+
+    vertical-align:middle;
+
+    margin:0 2px;
+
+    transform:translateY(1px);
+
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+/* =========================
+   MOBILE — URUN MANIFIESTO
+========================= */
+
+
+@media (max-width:768px){
+
+/* =========================
+   BASE MOBILE
+========================= */
+
+body{
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+/* CONTENEDOR GENERAL */
+
+.manifesto-page{
+    min-height:auto;
+    align-items:flex-start;
+}
+
+/* HERO */
+
+.hero{
+    min-height:auto;
+    padding:34px 22px 28px;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.manifesto-content{
+    width:100%;
+    max-width:100%;
+    margin:0 auto;
+}
+
+/* GRID */
+
+.manifesto-layout{
+    display:flex;
+    flex-direction:column;
+    gap:34px;
+    align-items:flex-start;
+}
+
+/* =========================
+   TITULO
+========================= */
+
+.manifesto-title{
+    width:100%;
+    max-width:100%;
+}
+
+.manifesto-badge{
+    font-size:10px;
+    padding:7px 13px;
+    margin-bottom:16px;
+    letter-spacing:1.3px;
+}
+
+/* TITULAR PRINCIPAL */
+
+.manifesto-title h1{
+    font-size:clamp(2rem,8vw,2.7rem);
+    line-height:1.03;
+    letter-spacing:-1.6px;
+    max-width:95%;
+}
+
+/* INTRO */
+
+.manifesto-intro{
+    margin-top:16px;
+    max-width:92%;
+    font-size:14px;
+    line-height:1.65;
+    color:#666;
+}
+
+/* =========================
+   TEXTO PRINCIPAL
+========================= */
+
+.manifesto-text{
+    width:100%;
+    max-width:100%;
+}
+
+/* PÁRRAFOS CON UX TIPO SAAS */
+
+.manifesto-text p{
+    font-size:14px;
+    line-height:1.8;
+    margin:0 0 22px;
+
+    text-align:justify;
+    text-justify:inter-word;
+
+    color:#5f6368;
+
+    max-width:100%;
+}
+
+/* PRIMER PÁRRAFO MÁS FUERTE */
+
+.manifesto-text p:first-child{
+    color:#2b2b2b;
+}
+
+/* DIVIDER */
+
+.manifesto-divider{
+    margin:28px 0 20px;
+}
+
+/* FIRMA */
+
+.manifesto-sign{
+    padding-top:0;
+    margin-top:4px;
+}
+
+.manifesto-sign strong{
+    font-size:18px;
+}
+
+/* ==================================
+   FOOTER MOBILE — SE MANTIENE
+================================== */
+
+.urun-footer{
+    padding:0px 0 0;
+}
+
+/* TOP */
+
+.urunf-top{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    padding:0 22px 38px; 
+}
+
+/* MARCA */
+
+.urunf-brand{
+    width:100%;
+    text-align:left; 
+}
+
+.urunf-title{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    font-size:24px;
+    line-height:1.15;
+    max-width:280px;  
+    margin-bottom:20px;
+}
+
+/* COLUMNAS */
+
+.urunf-columns{
+    width:100%;
+    display:flex;
+    flex-direction:column;  
+}
+
+/* BLOQUES */
+
+.urunf-col{
+    width:100%;
+    padding:5px 0;
+    border-bottom:1px solid rgba(255,255,255,.08); 
+    margin-top:-20px;
+}
+
+.urunf-col:last-child{
+    border-bottom:none;
+}
+
+/* TITULOS */
+
+.urunf-col h5{
+    font-size:11px;
+    letter-spacing:.15em;
+    margin-bottom:15px;
+    color:#7a7a7a;
+}
+
+/* ITEMS */
+
+.urunf-col li{
+    font-size:14px;
+    line-height:1.35;
+}
+
+/* LINKS */
+
+.urunf-col a{
+    opacity:.82;
+    text-decoration:none;
+}
+
+/* NOTE */
+
+.urunf-note{
+    margin-top:10px;
+    font-size:11px;
+    line-height:1.4;
+}
+
+/* BOTTOM */
+
+.urunf-bottom{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+    text-align:center;
+
+    padding:22px 20px 26px;
+}
+
+/* OCULTAR FORMULA */
+
+.urunf-formula{
+    display:none;
+}
+
+/* ELIMINAR TEXTO EXTRA */
+
+.urunf-bottom .urunf-item:nth-child(3){
+    display:none;
+}
+
+/* TEXTO */
+
+.urunf-item{
+    font-size:12px;
+    line-height:1.45;
+    color:#9a9a9a;
+}
+
+/* HEART */
+
+.urunf-heart{
+    width:80px;
+    height:80px;
+}
+
+/* HECHO CON */
+
+.urunf-right{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    font-size:40px;
+}
+
+/* COLOMBIA */
+
+.colombia{
+    display:block;
+    text-align:left;
+    width:100%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   GUÍAS DE DISEÑO (OVERLAY)
+   SOLO PARA DESARROLLO
+========================= */
+
+.layout-guides {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+.layout-guides::before,
+.layout-guides::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgb(255, 0, 0);
+}
+
+/* GUÍA IZQUIERDA */
+.layout-guides::before {
+  left: calc(50% - 598px);
+}
+
+/* GUÍA DERECHA */
+.layout-guides::after {
+  right: calc(50% - 598px);
+}

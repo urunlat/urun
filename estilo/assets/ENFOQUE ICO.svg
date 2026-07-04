@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 661.96 632.64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0e1117;
+      }
+
+      .cls-2 {
+        fill: #0bbf9a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="119.48" y="164.86" width="35.88" height="35.89"/>
+  <rect class="cls-1" x="83.59" y="200.75" width="35.89" height="143.54"/>
+  <rect class="cls-1" x="119.48" y="344.29" width="35.88" height="35.88"/>
+  <rect class="cls-1" x="155.35" y="380.17" width="35.89" height="35.89"/>
+  <rect class="cls-1" x="380.08" y="92.11" width="35.88" height="35.89" transform="translate(508.08 -287.97) rotate(90)"/>
+  <rect class="cls-1" x="290.36" y="2.41" width="35.89" height="143.54" transform="translate(382.49 -234.12) rotate(90)"/>
+  <rect class="cls-1" x="200.66" y="92.12" width="35.88" height="35.88" transform="translate(328.65 -108.54) rotate(90)"/>
+  <rect class="cls-1" x="164.76" y="128" width="35.89" height="35.89" transform="translate(328.65 -36.77) rotate(90)"/>
+  <rect class="cls-1" x="501.08" y="423.51" width="35.88" height="35.89" transform="translate(1038.0286 882.9224) rotate(-180)"/>
+  <rect class="cls-1" x="536.95" y="279.97" width="35.89" height="143.54" transform="translate(1109.7841 703.4861) rotate(-180)"/>
+  <rect class="cls-1" x="501.08" y="244.09" width="35.88" height="35.88" transform="translate(1038.0286 524.0656) rotate(-180)"/>
+  <rect class="cls-1" x="465.18" y="208.2" width="35.89" height="35.89" transform="translate(966.26 452.29) rotate(-180)"/>
+  <rect class="cls-2" x="262.89" y="248.23" width="136.17" height="136.17" transform="translate(661.96 632.64) rotate(-180)"/>
+  <rect class="cls-1" x="240.47" y="496.26" width="35.88" height="35.89" transform="translate(-255.8 772.61) rotate(-90)"/>
+  <rect class="cls-1" x="330.18" y="478.31" width="35.89" height="143.54" transform="translate(-201.96 898.21) rotate(-90)"/>
+  <rect class="cls-1" x="419.9" y="496.27" width="35.88" height="35.88" transform="translate(-76.37 952.04) rotate(-90)"/>
+  <rect class="cls-1" x="455.77" y="460.37" width="35.89" height="35.89" transform="translate(-4.6 952.04) rotate(-90)"/>
+</svg>
